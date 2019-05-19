@@ -16,6 +16,16 @@ public class MainActivity extends AppCompatActivity {
     public void BMI(View view) {
         Intent intent = new Intent(this, BMIActivity.class);
         startActivity(intent);
-
     }
+
+    public void EER(View view) {
+        Intent intent = new Intent(this, EERActivity.class);
+        startActivity(intent);
+    }
+    public void PHT(View view) {
+        Intent intent = new Intent ( this, PHTActivity.class);
+        startActivity(intent);
+    }
+
+
 }

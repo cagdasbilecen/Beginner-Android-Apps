@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import java.lang.*;
+import android.widget.Toast;
 
 
 public class BMIActivity extends AppCompatActivity {
@@ -37,6 +38,10 @@ public class BMIActivity extends AppCompatActivity {
             {
             textView.setText("Please enter your weight and height.");
             }
+        if(Double.parseDouble(sedit_text2)>3) {
+            Toast.makeText(getApplicationContext(), "Height is type of meter, care.", Toast.LENGTH_LONG).show();
+        }
+
         else
             {
             Double weight = Double.parseDouble(sedit_text);

@@ -50,7 +50,7 @@ public class PHTActivity extends AppCompatActivity {
     }
 
     public String bloodPressure() {
-        if(!editTextBloodPressure.getText().toString().matches("") && editTextBloodPressure.getText().toString().matches("[0-99999]/[0-99999]")) {
+        if(editTextBloodPressure.getText().toString().matches("[0-99999]{2}/[0-99999]{2}")) {
             String[] blood = editTextBloodPressure.getText().toString().split("/");
             int systolic = Integer.parseInt(blood[0]);
             int diastolic = Integer.parseInt(blood[1]);
@@ -134,12 +134,12 @@ public class PHTActivity extends AppCompatActivity {
         boolean isSaved=false;
 
         textViewBloodPressure.setText("Blood Pressure Result: " + bloodPressure());
-        if(!editTextBloodPressure.getText().toString().matches("") && editTextBloodPressure.getText().toString().matches("[0-99999]/[0-99999]") ) {
+        if(!editTextBloodPressure.getText().toString().matches("") && editTextBloodPressure.getText().toString().matches("[0-99999]{2}/[0-99999]{2}") ) {
             g.addBloodPressure(editTextBloodPressure.getText().toString());
             isSaved=true;
         }
-        else if(editTextBloodPressure.getText().toString().matches("") || !editTextBloodPressure.getText().toString().matches("[0-99999]/[0-99999]") ) {
-            if(!editTextBloodPressure.getText().toString().matches("[0-99999]/[0-99999]") && !editTextBloodPressure.getText().toString().matches("") )
+        else if(editTextBloodPressure.getText().toString().matches("") || !editTextBloodPressure.getText().toString().matches("[0-99999]{2}/[0-99999]{2}") ) {
+            if(!editTextBloodPressure.getText().toString().matches("[0-99999]{2}/[0-99999]{2}") && !editTextBloodPressure.getText().toString().matches("") )
                 Toast.makeText(getApplicationContext(), "Wrong blood pressure format!", Toast.LENGTH_LONG).show();
 
         }

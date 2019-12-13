@@ -1,2 +1,1 @@
-# Beginner-Android-Apps
-Basic android applications.
+A health tracker application which includes various tests.
